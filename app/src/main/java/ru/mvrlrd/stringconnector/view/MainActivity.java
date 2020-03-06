@@ -3,7 +3,6 @@ package ru.mvrlrd.stringconnector.view;
 import androidx.appcompat.app.AppCompatActivity;
 import ru.mvrlrd.stringconnector.R;
 import ru.mvrlrd.stringconnector.presenter.Presenter;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -28,21 +27,12 @@ public class MainActivity extends AppCompatActivity implements MainView {
         View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presenter.onButtonPresenter();
+                presenter.onButtonPresenter(editText.getText().toString());
             }
         };
         Button button = findViewById(R.id.button);
         button.setOnClickListener(onClickListener);
 
-    }
-
-    @Override
-    public void setEditText(String s) {
-        this.editText.setText(s);
-    }
-
-    public String getEditedText() {
-        return editText.getText().toString();
     }
 
     @Override

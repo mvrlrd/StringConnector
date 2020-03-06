@@ -17,8 +17,8 @@ public class Presenter {
         model.getUnitedText().append(s);
     }
 
-    public void onButtonPresenter(){
-        addTextToStringBuilderFromModel(activity.getEditedText()); //имеет ли смысл менять stringBuilder в моделе?
+    public void onButtonPresenter(String s){
+        addTextToStringBuilderFromModel(s); //имеет ли смысл менять stringBuilder в моделе?
         activity.setText(model.getUnitedText().toString());
     }
 
