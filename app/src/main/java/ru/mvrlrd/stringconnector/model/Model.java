@@ -10,6 +10,8 @@ public class Model {
     public StringBuilder getUnitedText() {
         return unitedText;
     }
-
-
+    public void setStringBuilderInModel(String s){
+        unitedText.append(s);
+    }
+    
 }

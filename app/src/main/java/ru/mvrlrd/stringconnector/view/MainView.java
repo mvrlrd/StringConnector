@@ -1,7 +1,11 @@
 package ru.mvrlrd.stringconnector.view;
 
-public interface MainView {
-    void setEditText(String s);
-    String getEditedText();
+
+import moxy.MvpView;
+import moxy.viewstate.strategy.AddToEndStrategy;
+import moxy.viewstate.strategy.StateStrategyType;
+
+public interface MainView extends MvpView {
+    @StateStrategyType(value = AddToEndStrategy.class)
     void setText(String s);
 }
